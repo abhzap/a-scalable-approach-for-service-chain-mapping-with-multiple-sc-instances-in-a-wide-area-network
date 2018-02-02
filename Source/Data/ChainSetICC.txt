@@ -1,0 +1,30 @@
+This file contains the service chains to be deployed.
+
+The chains to be deployed logically:
+
+0	-> Firewall ->
+1	-> Session Border Controller (SBC) ->
+2	-> Firewall -> NAT ->
+3	-> NAT -> WAN Acceleration (WANA) ->
+4	-> SBC -> Quality of Service (QoS) ->
+5	-> NAT -> Application Opimitizer (AO) -> WAN Acceleration (WANA) ->
+6	-> Firewall -> Intrusion Detection System (IDS) -> Decryption -> QoS
+7	-> NAT -> Traffic Shaper -> AO -> Encryption -> WANA
+
+Index  Set of VNFs
+************************START OF FILE**************************
+0	3,4
+1	3,6
+2	3,7
+3	7,4
+4	6,8
+5	5,2,8
+6	1,5,2,8
+7	7,3
+8	5,1
+9	2,8
+10	1,5,2,8,3
+11	1,2
+12	2,3,5
+13	3,4,3
+**************************END OF FILE**************************

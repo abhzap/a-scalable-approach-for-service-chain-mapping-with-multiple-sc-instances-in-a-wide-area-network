@@ -1,0 +1,5 @@
+traffic generation in Mbps
+src	s_t	dest	d_t	hr1	hr2	hr3
+************START OF FILE*****************
+1	SW	3	SW	5800	2900	2900
+************END OF FILE******************

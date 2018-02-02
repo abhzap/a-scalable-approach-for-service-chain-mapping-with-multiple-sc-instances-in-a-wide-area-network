@@ -1,0 +1,51 @@
+This file contains the service chains to be deployed.
+
+Sources:
+Web Service, VoIP, Video Streaming,Cloud Gaming - Massimo Paper
+Video Streaming - Hierarchical Service Chaining (draft-dolson-sfc-hierarchical-02)
+Enterprise Services - ETSI NFV Use Cases
+
+The chains to de deployed logically:
+
+0	Web Service	->NAT->Firewall(FW)->Traffic Shaper(TS)->WAN Optimization(WANO)->IDS
+1	VoIP		->NAT->FW->TS->FW->NAT
+2	Video Streaming	->NAT->FW->TS->Application Optimizer(AO)->IDS
+3	Cloud Gaming	->NAT->FW->AO->WANO->IDPS
+4	Web Service	->FW->WANO
+5	Web Service	->FW->AO->IDS
+6	VoIP		->FW->SBC
+7	VoIP		->NAT->FW->SBC
+8	Video Streaming	->FW->AO->
+9	Video Streaming	->NAT->FW->AO->
+10	Cloud Gaming	->FW->AO->WANO
+11	Cloud Gaming	->NAT->FW->AO->WANO
+12	Enterprise Ser1	->NAT->TS->AO->IPsec-> WAN0
+13	Enterprise Ser2	->FW->IDS->IPSec->QoS
+14	Video Streaming	->TS->AO
+15	Web Service	->FW->AO->TS->WAN
+16	VoIP		->NAT->FW->TS->FW
+17	Video Streaming	->NAT->FW->TS->AO		
+18	Cloud Gaming	->NAT->FW->AO->WANO
+
+Index	Seq.OfVNFs	LatencyReq(us)
+************************START OF FILE**************************
+0	3,1,7,4,5	500000
+1	3,1,7,1,3	100000
+2	3,1,7,9,5	100000
+3	3,1,9,4,5	60000
+4	1,4	500000	
+5	1,9,5	500000
+6	1,6	100000
+7	3,1,6	100000
+8	1,9	100000
+9	3,1,9	100000
+10	1,9,4	60000
+11	3,1,9,4	60000
+12	3,7,9,2,4	200000
+13	1,5,2,8	200000
+14	7,9	100000
+15	3,1,7,4	500000
+16	3,1,7,1	100000
+17	3,1,7,9	100000
+18	3,1,9,4	60000				
+**************************END OF FILE**************************

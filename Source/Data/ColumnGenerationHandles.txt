@@ -1,0 +1,50 @@
+
+
+*******Objective Master Problem********													
+ //handle for Objective																									(1)	-	BwUsed
+
+*******Constraints Master Problem********
+ //handle for configuration constraints  														 					(2)	-	place_config_constraint
+ //handle for core capacity constraint	                                                           					(3)	-	core_capacity_constraint
+ //handle for source outgoing link constraint 																	(4) 	- 	src_outgoing_constraint
+ //handle for flow conservation constraint : placement for ingress node 							(5) 	- 	flow_place_ing_constraint
+ //handle for flow conservation constraint : no placement for ingress node 						(6) 	- 	flow_noplace_ing_constraint
+ //handle for source incoming link constraint 																	(7)	- 	src_incoming_constraint
+ //handle for destination outgoing link constraint 															(8) 	- 	dest_outgoing_constraint
+ //handle for flow conservation constraint : placement egress node 								(9) 	- 	flow_place_egr_constraint
+ //handle for flow conservation constraint : no placement egress node 							(10) - 	flow_nplace_egr_constraint
+ //handle for destination incoming link constraint 															(11) - 	dest_incoming_constraint
+ //handle for flow capacity constraint 																			(12) - 	flow_capacity_constraint
+ //handle for function placement relating to configuration selection constraint - 1 			(13) -	rel_place_conf_constraint_1
+ //handle for function placement relating to configuration selection constraint - 2 			(14) -	rel_place_conf_constraint_2
+ 
+ ********Variables for Master Problem*********
+ //handle for variables																									Cut, usedVarZ, usedVarY, usedVarX
+ //handle for variable z^gamma																					var_z_gamma
+ //handle for variable x_vf																								var_x_vf
+ //handle for variable y_l^sigma^sd																				var_y_l_sigma_sd
+ 
+ 
+
+*******Objective Pricing Problem********													
+ //handle for Objective																									(16) -	reducedCost
+ 
+********Constraints Pricing Problem********
+ //vnf placement constraint 																							(17)		-	vnf_placement
+ //placement of initial 2 VNFs outgoing																			(18) 	-	vnf_placement_first_2_sc_outgoing
+ //placement of initial 2 VNFs incoming 																			(19) 	- 	vnf_placement_first_2_sc_incoming
+ //placement of sequential VNFs in a service chain in NFV nodes 										(20) 	-	vnf_placement_seq_2_nfv_nodes
+ //placement of sequential VNFs in a service chain in non-NFV nodes								(21) 	-	vnf_placement_seq_2_non_nfv_nodes
+ //placement of last 2 VNFs outgoing																				(22) 	-	vnf_placement_last_2_sc_outgoing
+ //placement of last 2 VNFs incoming																				(23) 	-	vnf_placement_last_2_sc_incoming
+
+ ********Variables for Pricing Problem*********
+ //handles for variables																									Used_var_a_v_sigma,Used_var_b_l_sigma_i_i1
+ //handle for variable a_v_sigma																					var_a_v_sigma
+ //handle for variable b_l_sigma^i^i+1																			var_b_l_sigma_i_i1
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,26 @@
+Ethernet is widely used Datacenter interconnect technology.
+http://www.cisco.com/c/en/us/about/security-center/network-performance-metrics.html
+
+Ethernet minimum frame size: 84 bytes
+Ethernet maximum frame size: 1538 bytes
+packet size (bytes): ps
+packet rate (packets/second): pr
+
+bw(Gbps)	ps	pr	
+************START OF FILE*****************
+.1	100	101500
+.1	200	75000
+.1	500	35000
+.1	1000	10500
+.1	1500	7500
+1	100	1015000
+1	200	750000
+1	500	350000
+1	1000	100500
+1	1500	75000
+10	100	10150000
+10	200	7500000
+10	500	3500000
+10	1000	1005000
+10	1500	750000
+************END OF FILE******************

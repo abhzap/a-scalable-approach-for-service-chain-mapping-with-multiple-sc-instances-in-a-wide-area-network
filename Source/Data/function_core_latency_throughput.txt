@@ -1,0 +1,25 @@
+****** APPLICATION *******         ***INDEX****
+	Firewall			1
+	IPsec VPN/Encryption		2
+	NAT				3
+	WAN opimization			4
+	IDS				5
+	SBC				6
+	Traffic Shaper			7
+	QoS				8
+	Application Optimizer		9
+Updated based on the details from Cisco CSR 1000 V Router
+
+
+func_index	core_count(per Gbps)	processing delay(ms)
+************START OF FILE*****************
+1	0.4	.2
+2	0.4	.2	
+3	0.2	.1	
+4	1.6	.8
+5	0.4	.2
+6	1.6	.8	
+7	0.4	.2
+8	0.2	.1
+9	1.6	.8
+************END OF FILE******************

@@ -1,0 +1,17 @@
+###### Open Virtual Switch (OVS) forwarding latency ######
+
+IMIX (Mixture of Different Packet sizes found on the internet)
+
+(OVS-DPDK)
+VM-to-VM latency performance (us)
+Min	25 
+Avg	75
+Max	200
+
+(OVS-DPDK)
+Full path performance (us)
+Min	25
+Avg	50
+Max	400
+
+ 
